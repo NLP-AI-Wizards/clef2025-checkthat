@@ -181,10 +181,7 @@ If you find our work helpful or inspiring, please feel free to cite it:
   address   = {Madrid, Spain},
   publisher = {CEUR-WS.org},
   year      = {2025},
-  url       = {https://ceur-ws.org/Vol-4038/paper_70.pdf},
-  eprint    = {2507.11764},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CL}
+  url       = {https://ceur-ws.org/Vol-4038/paper_70.pdf}
 }
 ```
 

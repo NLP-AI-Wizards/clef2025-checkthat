@@ -123,9 +123,8 @@ body {
 }
 
 .publication-banner {
-  max-height: 70vh;
   border-radius: var(--border-radius-lg);
-  overflow: hidden;
+  overflow: visible;
   box-shadow: var(--shadow-xl);
   margin: 2rem 0;
 }
@@ -209,6 +208,10 @@ body {
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-lg);
   transition: var(--transition);
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
 }
 
 .publication-banner img:hover {
@@ -748,5 +751,4 @@ a:focus {
     box-shadow: none !important;
   }
 }
-
 
