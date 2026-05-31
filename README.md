@@ -1,7 +1,7 @@
 # Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News
 
 **AI Wizards @ CLEF 2025 CheckThat! Lab – Task 1**
-Code and materials for our submission to **Subjectivity Detection in News Articles**, now available on arXiv: [2507.11764](https://arxiv.org/abs/2507.11764) ([arXiv][1]).
+Code and materials for our submission to **Subjectivity Detection in News Articles**, published in the [CLEF 2025 Working Notes][1] and also available as an [arXiv preprint][2].
 
 ---
 
@@ -74,6 +74,7 @@ Our innovation: *augmenting transformer embeddings with sentiment signals*, resu
 ```clef2025-checkthat/
 ├── baseline/                # Baseline paraphrase-miniLM model
 ├── data/                    # Task datasets
+├── docs/                    # Static project page
 ├── draw-io/                 # Diagrams for model architecture
 ├── img/                     # Model diagrams
 ├── notebooks/               # Notebooks for EDA and training
@@ -170,14 +171,20 @@ Our models are available on the Hugging Face Hub for easy access. You can also i
 If you find our work helpful or inspiring, please feel free to cite it:
 
 ```bibtex
-@misc{fasulo2025aiwizardscheckthat2025,
-      title={AI Wizards at CheckThat! 2025: Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News Articles}, 
-      author={Matteo Fasulo and Luca Babboni and Luca Tedeschini},
-      year={2025},
-      eprint={2507.11764},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2507.11764}, 
+@inproceedings{fasulo2025aiwizardscheckthat,
+  title     = {AI Wizards at CheckThat! 2025: Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News Articles},
+  author    = {Fasulo, Matteo and Babboni, Luca and Tedeschini, Luca},
+  booktitle = {Working Notes of the Conference and Labs of the Evaluation Forum (CLEF 2025)},
+  series    = {CEUR Workshop Proceedings},
+  volume    = {4038},
+  pages     = {912--925},
+  address   = {Madrid, Spain},
+  publisher = {CEUR-WS.org},
+  year      = {2025},
+  url       = {https://ceur-ws.org/Vol-4038/paper_70.pdf},
+  eprint    = {2507.11764},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL}
 }
 ```
 
@@ -185,4 +192,5 @@ If you find our work helpful or inspiring, please feel free to cite it:
 
 This work is licensed under the [Creative Commons Attribution 4.0 International License](LICENSE) (CC BY 4.0).
 
-[1]: https://arxiv.org/pdf/2507.11764 "AI Wizards at CheckThat! 2025: Enhancing Transformer-Based ..."
+[1]: https://ceur-ws.org/Vol-4038/paper_70.pdf "AI Wizards at CheckThat! 2025: Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News Articles"
+[2]: https://arxiv.org/abs/2507.11764 "AI Wizards at CheckThat! 2025: Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News Articles"
