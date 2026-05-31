@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="AI Wizards at CheckThat! 2025: Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News Articles">
+  <meta name="description" content="AI Wizards' CLEF 2025 CheckThat! Lab Task 1 system for multilingual subjectivity detection in news articles using sentiment-augmented transformer embeddings and threshold calibration.">
+  <meta name="keywords" content="CheckThat 2025, CLEF 2025, subjectivity detection, news articles, natural language processing, multilingual classification, sentiment augmentation">
+  <meta name="author" content="Matteo Fasulo, Luca Babboni, Luca Tedeschini">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AI Wizards">
+  <meta property="og:title" content="AI Wizards at CheckThat! 2025">
+  <meta property="og:description" content="Sentiment-augmented transformer embeddings for subjectivity detection in monolingual, multilingual, and zero-shot news settings.">
+  <meta property="og:url" content="https://matteofasulo.github.io/clef2025-checkthat/">
+  <meta property="og:image" content="https://raw.githubusercontent.com/MatteoFasulo/clef2025-checkthat/main/draw-io/model_pipeline_schema.svg">
+  <meta property="og:image:alt" content="Model pipeline for CLEF 2025 CheckThat subjectivity detection">
+  <meta property="article:published_time" content="2025-09-09T00:00:00.000Z">
+  <meta property="article:author" content="Matteo Fasulo">
+  <meta property="article:author" content="Luca Babboni">
+  <meta property="article:author" content="Luca Tedeschini">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="natural language processing">
+  <meta property="article:tag" content="subjectivity detection">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Wizards at CheckThat! 2025">
+  <meta name="twitter:description" content="Sentiment-augmented transformer embeddings for multilingual subjectivity detection in news articles.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/MatteoFasulo/clef2025-checkthat/main/draw-io/model_pipeline_schema.svg">
+  <meta name="twitter:image:alt" content="Model pipeline for CLEF 2025 CheckThat subjectivity detection">
+
+  <meta name="citation_title" content="AI Wizards at CheckThat! 2025: Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News Articles">
+  <meta name="citation_author" content="Fasulo, Matteo">
+  <meta name="citation_author" content="Babboni, Luca">
+  <meta name="citation_author" content="Tedeschini, Luca">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="Working Notes of the Conference and Labs of the Evaluation Forum (CLEF 2025)">
+  <meta name="citation_pdf_url" content="https://ceur-ws.org/Vol-4038/paper_70.pdf">
+  <meta name="citation_arxiv_id" content="2507.11764">
+
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>AI Wizards at CheckThat! 2025 | Academic Research</title>
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "AI Wizards at CheckThat! 2025: Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News Articles",
+    "description": "A CLEF 2025 CheckThat! Lab Task 1 system for subjectivity detection in news articles using sentiment-augmented transformer embeddings and threshold calibration.",
+    "author": [
+      {"@type": "Person", "name": "Matteo Fasulo"},
+      {"@type": "Person", "name": "Luca Babboni"},
+      {"@type": "Person", "name": "Luca Tedeschini"}
+    ],
+    "datePublished": "2025-09-09",
+    "publisher": {"@type": "Organization", "name": "CEUR-WS.org"},
+    "url": "https://matteofasulo.github.io/clef2025-checkthat/",
+    "image": "https://raw.githubusercontent.com/MatteoFasulo/clef2025-checkthat/main/draw-io/model_pipeline_schema.svg",
+    "keywords": ["CheckThat! 2025", "CLEF 2025", "subjectivity detection", "sentiment augmentation", "multilingual classification"],
+    "abstract": "This work classifies news sentences as subjective or objective in monolingual, multilingual, and zero-shot settings. It augments transformer sentence embeddings with sentiment scores and calibrates decision thresholds to address class imbalance.",
+    "citation": "Fasulo, Matteo, Babboni, Luca, and Tedeschini, Luca. AI Wizards at CheckThat! 2025: Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News Articles. In Working Notes of the Conference and Labs of the Evaluation Forum (CLEF 2025), CEUR Workshop Proceedings, Vol. 4038, pages 912-925, CEUR-WS.org, 2025.",
+    "isAccessibleForFree": true,
+    "mainEntity": {"@type": "WebPage", "@id": "https://matteofasulo.github.io/clef2025-checkthat/"}
+  }
+  </script>
+</head>
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">AI Wizards at CheckThat! 2025</h1>
+              <p class="subtitle is-4">Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News Articles</p>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="mailto:matteo.fasulo@studio.unibo.it">Matteo Fasulo</a>,</span>
+                <span class="author-block"><a href="mailto:luca.babboni2@studio.unibo.it">Luca Babboni</a>,</span>
+                <span class="author-block"><a href="mailto:luca.tedeschini3@studio.unibo.it">Luca Tedeschini</a></span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">CLEF 2025 CheckThat! Lab - Task 1</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="https://ceur-ws.org/Vol-4038/paper_70.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2507.11764" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="ai ai-arxiv"></i></span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://github.com/MatteoFasulo/clef2025-checkthat" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://checkthat.gitlab.io/clef2025/task1/" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-tasks"></i></span>
+                      <span>Task</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                This work presents AI Wizards' participation in CLEF 2025 CheckThat! Lab Task 1, where systems classify news sentences as subjective or objective. The task covers monolingual, multilingual, and zero-shot settings, with training and development data for Arabic, Bulgarian, English, German, and Italian, plus final evaluation on additional unseen languages.
+              </p>
+              <p>
+                Our system augments transformer sentence representations with sentiment scores from an auxiliary multilingual sentiment model. We evaluate mDeBERTaV3-base, ModernBERT-base for English, and a Llama 3.2-1B baseline, and apply decision threshold calibration to improve performance under class imbalance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Method</h2>
+            <div class="content">
+              <p>
+                The pipeline fine-tunes pretrained language models for binary subjectivity classification. For the sentiment-augmented model, positive, neutral, and negative scores from <code>twitter-xlm-roberta-base-sentiment</code> are concatenated with the transformer representation before the final classifier.
+              </p>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <div class="box">
+                  <h3 class="title is-5">Transformer Models</h3>
+                  <p>mDeBERTaV3-base handles multilingual settings, ModernBERT-base is evaluated for English, and Llama 3.2-1B is adapted with a classification head.</p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="box">
+                  <h3 class="title is-5">Sentiment Features</h3>
+                  <p>Auxiliary sentiment probabilities are added to sentence embeddings to help identify opinion-laden or affective language.</p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="box">
+                  <h3 class="title is-5">Threshold Calibration</h3>
+                  <p>Decision thresholds are optimized on development data to improve macro-F1 and the subjective-class F1 score under imbalanced labels.</p>
+                </div>
+              </div>
+            </div>
+            <figure class="publication-banner">
+              <img src="static/images/model_pipeline_schema.svg" alt="Subjectivity detection model pipeline with transformer, sentiment, and threshold calibration branches">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Task Setting</h2>
+            <div class="content">
+              <p>
+                CheckThat! Task 1 focuses on sentence-level subjectivity detection in news articles. Each input sentence is labeled as objective or subjective, without access to the wider article context.
+              </p>
+              <p>
+                The system was evaluated across monolingual tracks for Arabic, English, German, and Italian; zero-shot tracks for Greek, Polish, Romanian, and Ukrainian; and a multilingual track. The repository includes the shared-task data files, training notebooks, scoring utilities, and model implementations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Results</h2>
+            <div class="content">
+              <p>
+                Sentiment augmentation improved subjective-class detection in several monolingual settings, especially English and Italian. The best multilingual development setup excluded Arabic and used sentiment-augmented mDeBERTaV3, reaching Macro-F1 0.7962 and SUBJ F1 0.7114 on the project evaluation split.
+              </p>
+              <p>
+                In the official CLEF 2025 challenge results, AI Wizards ranked first in the Greek zero-shot track with Macro-F1 0.51, and placed in the top group across several other zero-shot and monolingual tracks. A submission issue affected the official multilingual score; re-evaluation with the intended split yielded Macro-F1 0.68.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Limitations</h2>
+            <div class="content">
+              <p>
+                Sentiment features were produced by a general-purpose model trained outside the news domain, and their usefulness varied across languages. Arabic remained challenging in monolingual, multilingual, and zero-shot settings, and pre-translation to English did not improve the final configuration.
+              </p>
+              <p>
+                The Llama 3.2-1B experiments were limited by computational constraints and used parameter-efficient fine-tuning; larger models or richer fusion mechanisms may lead to different outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@inproceedings{fasulo2025aiwizardscheckthat,
+  title     = {AI Wizards at CheckThat! 2025: Enhancing Transformer-Based Embeddings with Sentiment for Subjectivity Detection in News Articles},
+  author    = {Fasulo, Matteo and Babboni, Luca and Tedeschini, Luca},
+  booktitle = {Working Notes of the Conference and Labs of the Evaluation Forum (CLEF 2025)},
+  series    = {CEUR Workshop Proceedings},
+  volume    = {4038},
+  pages     = {912--925},
+  address   = {Madrid, Spain},
+  publisher = {CEUR-WS.org},
+  year      = {2025},
+  url       = {https://ceur-ws.org/Vol-4038/paper_70.pdf},
+  eprint    = {2507.11764},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
