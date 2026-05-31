@@ -162,7 +162,7 @@ python scorer/evaluate.py \
 
 Our models are available on the Hugging Face Hub for easy access. You can also interactively explore the results using our dashboard on Hugging Face Spaces.
 
-[AI Wizards @ CLEF 2025 - CheckThat! Lab - Task 1 Subjectivity](https://huggingface.co/collections/MatteoFasulo/clef-2025-checkthat-lab-task-1-subjectivity-6878f0199d302acdfe2ceddb)
+[AI Wizards @ CLEF 2025 - CheckThat! Lab - Task 1 Subjectivity](https://huggingface.co/collections/AIWizards/clef-2025-checkthat-lab-task-1-subjectivity)
 
 ---
 
